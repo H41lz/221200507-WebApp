@@ -16,7 +16,7 @@ if (-not (Test-Path .git)) {
 $remoteExists = git remote get-url origin 2>$null
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Adding remote repository..." -ForegroundColor Yellow
-    git remote add origin https://github.com/h41lz/oliver-lanuza.github.io.git
+    git remote add origin https://github.com/H41lz/Portfolio-Website.git
 } else {
     Write-Host "Remote already configured: $remoteExists" -ForegroundColor Green
 }
@@ -43,7 +43,7 @@ git push -u origin main
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
     Write-Host "=== Deployment Successful! ===" -ForegroundColor Green
-    Write-Host "Your site should be available at: https://h41lz.github.io/oliver-lanuza.github.io/" -ForegroundColor Cyan
+    Write-Host "Your site should be available at: https://h41lz.github.io/Portfolio-Website/" -ForegroundColor Cyan
     Write-Host "Note: It may take a few minutes for changes to appear." -ForegroundColor Yellow
 } else {
     Write-Host ""
