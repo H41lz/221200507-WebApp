@@ -110,12 +110,42 @@ hint: Updates were rejected because the remote contains work that you do not hav
    git push origin main
    ```
 
+**⚠️ If you get "You have not concluded your merge" error:**
+
+This means you have an unfinished merge. Complete it first:
+
+1. **Check status:**
+   ```powershell
+   git status
+   ```
+
+2. **If conflicts are already resolved, complete the merge:**
+   ```powershell
+   git commit -m "Complete merge with remote changes"
+   ```
+
+3. **Add any other changes and commit:**
+   ```powershell
+   git add .
+   git commit -m "Update files"
+   ```
+
+4. **Then push:**
+   ```powershell
+   git push origin main
+   ```
+
 **Alternative - If you want to see what changed on remote first:**
 ```powershell
 git fetch origin
 git log HEAD..origin/main
 ```
 This shows you what commits are on the remote that you don't have locally.
+
+**Note for PowerShell:** Use `;` instead of `&&` to chain commands:
+```powershell
+git pull origin main; git push origin main
+```
 
 ### If you get "nothing to commit"
 - Make sure you saved your `index.html` file

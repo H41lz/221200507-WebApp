@@ -374,10 +374,10 @@ section .title::after{
     width: 60%;
 }
 .skills-content .right .nka::before{
-    width: 70%;
+    width: 50%;
 }
 .skills-content .right .md::before{
-    width: 75%;
+    width: 60%;
 }
 
 /* contact section styling */
