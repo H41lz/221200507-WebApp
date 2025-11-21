@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #0098FF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background: #0088e6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 152, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-button">Back</a>
+    <nav id="navbar">
+        <header>Visual Studio Code Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Overview">Introduction</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Basic_Layout">Basic Layout</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#user_and_workspaces">User and Workspaces</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Basic_Editing">Basic Editing</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Extensions">Extensions</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#IntelliSense">IntelliSense</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#VS_Code_for_the_Web">VS Code for the Web</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Snippets">Snippets in VS Code</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Accessibility">Accessibility</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Source_Control">Source Control</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Terminal">Terminal Basics</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#github_copilot_vs_code">GitHub Copilot in VS Code</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#remote1">VS Code Remote Development</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#remote2">Remote Development Extension Pack</a>
+            </li>
+            
+            <li>
+                <a class="nav-link" href="#Reference">Reference</a>
+            </li>
+        </ul>
+        </nav>
+            <main id="main-doc">
+                <section class="main-section" id="Overview">
+                <header>Introduction</header>
+                <article>
+                <p>
+                    Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+                    It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes
+                    (such as C++, C#, Java, Python, PHP, Go, .NET).
+                </p>
+
+                <p>
+                    Visual Studio Code supports Portable mode installation. This mode enables all data created and maintained by VS Code to live near itself,
+                    so it can be moved around across environments, for example, on a USB drive. See the VS Code Portable Mode documentation for details.
+                </p>
+                </article>
+        </section>
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <article>
+                <p>VS Code is a free code editor, which runs on the macOS, Linux, and Windows operating systems.</p>
+                <p>Follow the platform-specific guides below:</p>
+                <ul>
+                    <li>macOS</li>
+                    <li>Linux</li>
+                    <li>Windows</li>
+                </ul>
+                <p>VS Code is lightweight and should run on most available hardware and platform versions.
+                    You can review the System Requirements to check if your computer configuration is supported.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Basic_Layout">
+            <header>Basic Layout</header>
+            <article>
+                <p>VS Code comes with a simple and intuitive layout that maximizes the space provided for the editor while leaving ample room to browse and access the full context of your folder or project.</p>
+                <p>The UI is divided into five main areas:</p>
+                <ul>
+                    <li><strong>Editor</strong> - The main area to edit your files. You can open as many editors as you like side by side vertically and horizontally.</li>
+                    <li><strong>Primary Side Bar</strong> - Contains different views like the Explorer to assist you while working on your project.</li>
+                    <li><strong>Status Bar</strong> - Information about the opened project and the files you edit.</li>
+                    <li><strong>Activity Bar</strong> - Located on the far left-hand side, this lets you switch between views and gives you additional context-specific indicators,
+                        like the number of outgoing changes when Git is enabled.</li>
+                    <li><strong>Panel</strong> - An additional space for views below the editor region. By default, it houses output, debug information, errors and warnings, and an integrated terminal.
+                        Panel can also be moved to the left or right for more vertical space.</li>
+                </ul>
+                <p>VS Code is lightweight and should run on most available hardware and platform versions.
+                    You can review the System Requirements to check if your computer configuration is supported.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="user_and_workspaces">
+            <header>User and Workspaces</header>
+            <article>
+                <p>You can configure Visual Studio Code to your liking through its various settings. Nearly every part of VS Code's editor, user interface,
+                    and functional behavior has options you can modify.
+                </p>
+                <p>
+                    VS Code provides several different scopes for settings. When you open a workspace, you will see at least the following two scopes:
+                </p>
+                <ul>
+                    <li><strong>User Settings</strong> - Settings that apply globally to any instance of VS Code you open.</li>
+                    <li><strong>Workspace Settings</strong> - Settings stored inside your workspace and only apply when the workspace is opened.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Basic_Editing">
+            <header>Basic Editing</header>
+            <article>
+                <p>
+                    Visual Studio Code is an editor first and foremost, and includes the features you need for highly productive source code editing.
+                    This topic takes you through the basics of the editor and helps you get moving with your code.
+                </p>
+                <ul>
+                    <li>Extensions</li>
+                    <li>Keyboard Shortcuts</li>
+                    <li>Multiple selections (multi-cursor)</li>
+                    <li>Column (box) selection</li>
+                    <li>Save / Auto Save</li>
+                    <li>Hot Exit</li>
+                    <li>Find and Replace</li>
+                    <li>Search across files</li>
+                    <li>Search Editor</li>
+                    <li>IntelliSense</li>
+                    <li>Formatting</li>
+                    <li>Folding</li>
+                    <li>Indentation</li>
+                    <li>File encoding support</li>
+
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Extensions">
+            <header>Extensions</header>
+            <article>
+                The features that Visual Studio Code includes out-of-the-box are just the start.
+                VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.
+                VS Code's rich extensibility model lets extension authors plug directly into the VS Code UI and contribute functionality through the same APIs used by VS Code.
+                This article explains how to find, install, and manage VS Code extensions from the Visual Studio Code Marketplace.
+            </article>
+        </section>
+        <section class="main-section" id="IntelliSense">
+            <header>IntelliSense</header>
+            <p>
+                IntelliSense is a general term for various code editing features including:
+                code completion, parameter info, quick info, and member lists.
+                IntelliSense features are sometimes called by other names such as "code completion", "content assist", and "code hinting."
+            </p>
+            <p>
+                Visual Studio Code IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS, and Less out of the box.
+                VS Code supports word based completions for any programming language but can also be configured to have richer IntelliSense by installing a language extension.
+            </p>
+            <p>
+                Below are the most popular language extensions in the Marketplace.
+            </p>
+            <ul>
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>C#</li>
+                <li>Extension Pack for Java</li>
+                <li>Go</li>
+                <li>Dart</li>
+                <li>PHP Extension Pack</li>
+                <li>Ruby LSP</li>
+            </ul>
+            <p>
+                VS Code IntelliSense features are powered by a language service. A language service provides intelligent code completions based on language semantics and an analysis of your source code.
+                If a language service knows possible completions, the IntelliSense suggestions will pop up as you type.
+                If you continue typing characters, the list of members (variables, methods, etc.) is filtered to only include members containing your typed characters.
+                Pressing <code>Tab</code> or <code>Enter</code> will insert the selected member.
+            </p>
+            </section>
+        <section class="main-section" id="VS_Code_for_the_Web">
+            <header>VS Code for the Web</header>
+            <article>
+                <p>
+                    Visual Studio Code for the Web provides a free, zero-install Microsoft Visual Studio Code experience running entirely in your browser,
+                    allowing you to quickly and safely browse source code repositories and make lightweight code changes. 
+                    To get started, go to <code>https://vscode.dev</code> in your browser.
+                </p>
+                <p>
+                    VS Code for the Web has many of the features of VS Code Desktop that you love,
+                    including search and syntax highlighting while browsing and editing, along with extension support to work on your codebase and make simpler edits.
+                    In addition to opening repositories, forks, and pull requests from source control providers like GitHub and Azure Repos,
+                    you can also work with code that is stored on your local machine.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Snippets">
+            <header>Snippets in VS Code</header>
+            <article>
+                <p>
+                    Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.
+                </p>
+    
+                <p>
+                    Visual Studio Code, snippets appear in IntelliSense (Ctrl+Space) mixed with other suggestions,
+                    as well as in a dedicated snippet picker (Insert Snippet in the Command Palette).
+                </p>
+                <p>
+                    Snippets are scoped so that only relevant snippets are suggested. Snippets can be scoped by either:
+                </p>
+                <ul>
+                    <li><strong>1. the language(s)</strong> to which snippets are scoped (possibly all)</li>
+                    <li><strong>2. the project(s)</strong> to which snippets are scoped (probably all)</li>
+                </ul>
+                <p>
+                    Every snippet is scoped to one, several, or all ("global") languages based on whether it is defined in:
+                </p>
+                <ul>
+                    <li><strong>1. a language snippet file</strong></li>
+                    <li><strong>2. a global snippet file</strong></li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Accessibility">
+            <header>Accessibility</header>
+            <article>
+                <p>
+                    Visual Studio Code has many features to help make the editor accessible to all users.
+                    Zoom levels and High Contrast colors improve editor visibility,
+                    keyboard-only navigation supports use without a mouse, and the editor is optimized for screen readers.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Source_Control">
+            <header>Source Control</header>
+            <article>
+                <p>
+                    Visual Studio Code has integrated source control management (SCM) and includes Git support out-of-the-box.
+                    Many other source control providers are available through extensions on the VS Code Marketplace.
+                </p>
+                <p>
+                    The Source Control icon in the Activity Bar on the left will always indicate an overview of how many changes you currently have in your repository.
+                    Selecting the icon will show you the details of your current repository changes: CHANGES, STAGED CHANGES and MERGE CHANGES.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Terminal">
+            <header>Terminal Basics</header>
+            <article>
+                <p>
+                    Visual Studio Code includes a full featured integrated terminal that starts at the root of your workspace.
+                    It provides integration with the editor to support features like links and error detection.
+                    The integrated terminal can run commands such as mkdir and git just like a standalone terminal.
+                </p>
+                <p>You can open a terminal as follows:</p>
+                <ul>
+                    <li>From the menu, use the Terminal > New Terminal or View > Terminal menu commands.</li>
+                    <li>From the Command Palette <code>Ctrl+Shift+P</code> use the View: Toggle Terminal command.</li>
+                    <li>In the Explorer, you can use the Open in Integrated Terminal context menu command to open a new terminal from a folder.</li>
+                    <li>To toggle the terminal panel, use the <code>Ctrl+`</code> keyboard shortcut.</li>
+                    <li>To create a new terminal, use the <code>Ctrl+Shift+`</code> keyboard shortcut.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="github_copilot_vs_code">
+            <header>GitHub Copilot in VS Code</header>
+            <article>
+                <p>The GitHub Copilot extension is an AI pair programmer tool that helps you write code faster and smarter.
+                    You can use the Copilot extension in Visual Studio Code to generate code, learn from the code it generates, and even configure your editor.
+                </p>
+                <p>With GitHub Copilot in VS Code you can:</p>
+                <ul>
+                    <li>Get inline code suggestions while you're writing and iterating on code.</li>
+                    <li>Start a chat conversation to generate or refactor source code, produce documentation comments, or generate unit tests.</li>
+                    <li>Get help with fixing errors in your code, or resolve error while running commands in the terminal.</li>
+                    <li>Ask questions to help ramp-up on a new code base, or accelerate learning a new programming language or framework.</li>
+                    <li>Use chat features to discover and configure your VS Code setup.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="remote1">
+            <header>VS Code Remote Development</header>
+            <article>
+                <p>
+                    Visual Studio Code Remote Development allows you to use a container, remote machine, or the Windows Subsystem for Linux (WSL) as a full-featured development environment.
+                </p>
+                <p>You can:</p>
+                <ul>
+                    <li>Develop on the same operating system you deploy to or use larger or more specialized hardware.</li>
+                    <li>Separate your development environment to avoid impacting your local machine configuration.</li>
+                    <li>Make it easy for new contributors to get started and keep everyone on a consistent environment.</li>
+                    <li>Use tools or runtimes not available on your local OS or manage multiple versions of them.</li>
+                    <li>Develop your Linux-deployed applications using the Windows Subsystem for Linux.</li>
+                    <li>Access an existing development environment from multiple machines or locations.</li>
+                    <li>Debug an application running somewhere else such as a customer site or in the cloud.</li>
+                </ul>
+                <p>
+                    No source code needs to be on your local machine to get these benefits.
+                    Each extension in the Remote Development extension pack can run commands and other extensions directly inside a container,
+                    in WSL, or on a remote machine so that everything feels like it does when you run locally.
+                </p>
+            </article>
+        <section class="main-section" id="remote2">
+            <header>Remote Development Extension Pack</header>
+            <article>
+                <p>
+                    The Remote Development extension pack includes four extensions. See the following articles to get started with each of them:
+                </p>
+                <ul>
+                    <li><strong>Remote - SSH</strong> - Connect to any location by opening folders on a remote machine/VM using SSH.</li>
+                    <li><strong>Dev Containers</strong> - Work with a separate toolchain or container-based application inside (or mounted into) a container.</li>
+                    <li><strong>WSL</strong> - Get a Linux-powered development experience in the Windows Subsystem for Linux.</li>
+                    <li><strong>Remote - Tunnels</strong> - Connect to a remote machine via a secure tunnel, without configuring SSH.</li>
+                </ul>
+                <p>
+                    No source code needs to be on your local machine to get these benefits.
+                    Each extension in the Remote Development extension pack can run commands and other extensions directly inside a container,
+                    in WSL, or on a remote machine so that everything feels like it does when you run locally.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        If you want more information about VS Code. Please visit this link
+                        <a
+                            href="https://code.visualstudio.com/docs"
+                            target="_blank">VS Code</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

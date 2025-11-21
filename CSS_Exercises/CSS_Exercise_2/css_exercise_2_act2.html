@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --body: gray;
+            --mouth: black;
+            --feather: lightblue;
+            --beak-top: black;
+            --beak-down: black;
+            --leg: cyan;
+            --body-color: lightgray;
+        }
+        body {
+            background: var(--body-color);
+            font-family: sans-serif;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: crimson;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background: #b01030;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(220, 20, 60, 0.3);
+        }
+        .container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        .body, .mouth, .feather, .tail, .beak, .mouth::before, .mouth::after, .leg, .leg::after, .leg::before {
+            position: absolute;
+        }
+        .body, .mouth, .feather, .beak, .mouth::before, .mouth::after {
+            border-radius: 50%;
+        }
+
+        .body {
+            top: 26px;
+            left: 50px;
+            height: 180px;
+            width: 200px;
+            transform: rotate(-17deg);
+            background: linear-gradient(to bottom, transparent 0%, transparent 20%, var(--body) 20%);
+            z-index: 2;
+        }
+        .mouth {
+            background: var(--mouth);
+            top: 20px;
+            left: 180px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-17deg);
+            z-index: 5;
+        }
+        .mouth::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: white;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+        }
+        .mouth::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: black;
+            position: absolute;
+            top: 30px;
+            left: 55px;
+        }
+        .feather {
+            z-index: 4;
+            left: 44px;
+            top: -6px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--feather) 50%);
+            transform: rotate(-17deg);
+        }
+        .tail {
+            width: 150px;
+            height: 60px;
+            background-color: var(--mouth);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+            top: 92px;
+            left: -25px;
+            transform: rotate(-17deg);
+            z-index: 3;
+        }
+        .beak {
+            height: 100px;
+            width: 100px;
+            background: linear-gradient(to bottom, var(--beak-top) 0%, var(--beak-top) 15%, transparent 15%);
+            left: 230px;
+            top: 50px;
+            z-index: -1;
+            transform: rotate(-17deg);
+        }
+        .leg {
+            background: var(--leg);
+            height: 50px;
+            width: 10px;
+            border-radius: 10px;
+            top: 220px;
+            left: 125px;
+            transform: rotate(-15deg);
+            z-index: 1;
+        }
+        .leg::before {
+            bottom: -8px;
+            content: "";
+            width: 40px;
+            height: 9px;
+            background: var(--leg);
+            border-radius: 10px;
+            transform: rotate(15deg);
+            z-index: -1;
+        }
+        .leg::after {
+            top: -8px;
+            content: "";
+            width: 30px;
+            height: 9px;
+            background: var(--leg);
+            border-radius: 10px;
+            transform: rotate(-15deg);
+            z-index: -1;
+        }
+    </style>
+    <a href="../index.html" class="back-button">Back</a>
+    <div class="container">
+        <div class="body"></div>
+        <div class="mouth"></div>
+        <div class="beak"></div>
+        <div class="feather"></div>
+        <div class="tail"></div>
+        <div class="leg"></div>
+    </div>
+</body>
+</html>
